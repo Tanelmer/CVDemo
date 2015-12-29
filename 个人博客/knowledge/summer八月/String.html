@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集gbk，gb2312中文编码，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>html模板</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content"">	 
+		<!--head标签里面可以放css，js-->
+		<!--css：层叠样式表，就想一件美丽的外衣-->
+		<style type="text/css">
+		*{margin:0px;padding:0px;}
+		
+		
+		</style>
+	
+	</head>
+<body>
+	<!--<h2>将用户选择的数据提交到后台</h2>
+	<form action="" method="post">
+		<input type="checkbox" value="篮球" name="user">篮球
+		<input type="checkbox" value="足球" name="user">足球
+		<input type="checkbox" value="网球" name="user">网球
+		<input type="checkbox" value="乒乓球" name="user">乒乓球
+		<button type="submit" onclick="clickme()" value="提交">提交
+	</form>-->
+
+<script>
+	/*function clickme(){
+		var formdom=document.forms[0].user;
+		var len =formdom.length;
+		var arr=[];
+		//alert(len)
+		for(var i=0;i<len;i++){
+			if(formdom[i].checked){
+				arr.push(formdom[i].value)
+			}
+		}
+		alert(arr)//结果为 篮球，足球，网球，乒乓球
+	}*/
+	var arr=["a","s","d"];
+	//增 删 改 查=打印
+	arr.push("f");//追加（增）
+	alert(arr.toString())//打印 结果为 a,s,d,f
+	alert(arr.join("@").toString())//修改分隔符（一般是逗号分割） -----打印 结果为 a@s@d@f
+	alert(arr[1]="aa");//把原先的空间替换（根据下标索引替换）
+	delete arr[2];//删除元素d
+	alert(arr);//打印结果为 a,s 。 d元素被删除。
+</script>
+</body>
+</html>

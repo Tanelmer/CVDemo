@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>欢迎界面 </title>
+    <style>
+        .img{
+            position: relative;
+            z-index: 1;
+        }
+        .lan{
+            position: absolute;
+            z-index: 2;
+            top: 200px;
+            left: 200px;
+            width: 140px;
+            height: 140px;
+        }
+        @-moz-keyframes mini{
+            /*0%{opacity: 0.25}
+            30%{transform: scale(1)}
+            60%{transform: scale(0.5) rotate(0deg);background: red; opacity: 0.5}
+            100%{transform: scale(1) rotate(360deg); background: blueviolet;opacity: 0.25}
+            */
+            0% {transform: scale(1);}
+            10%, 20% {transform: scale(0.9) rotate(-3deg);}
+            30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+            40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+            100% {transform: scale(1) rotate(0);}
+        }
+        @-ms-keyframes mini{
+              /*0%{opacity: 0.25}
+              30%{transform: scale(1)}
+              60%{transform: scale(0.5) rotate(0deg);background: red; opacity: 0.5}
+              100%{transform: scale(1) rotate(360deg); background: blueviolet;opacity: 0.25}
+              */
+              0% {transform: scale(1);}
+              10%, 20% {transform: scale(0.9) rotate(-3deg);}
+              30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+              40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+              100% {transform: scale(1) rotate(0);}
+        }
+        @-o-keyframes mini{
+            /*0%{opacity: 0.25}
+            30%{transform: scale(1)}
+            60%{transform: scale(0.5) rotate(0deg);background: red; opacity: 0.5}
+            100%{transform: scale(1) rotate(360deg); background: blueviolet;opacity: 0.25}
+            */
+            0% {transform: scale(1);}
+            10%, 20% {transform: scale(0.9) rotate(-3deg);}
+            30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+            40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+            100% {transform: scale(1) rotate(0);}
+        }
+        @-webkit-keyframes mini{
+            /*0%{opacity: 0.25}
+            30%{transform: scale(1)}
+            60%{transform: scale(0.5) rotate(0deg);background: red; opacity: 0.5}
+            100%{transform: scale(1) rotate(360deg); background: blueviolet;opacity: 0.25}
+            */
+            0% {transform: scale(1);}
+            10%, 20% {transform: scale(0.9) rotate(-3deg);}
+            30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+            40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+            100% {transform: scale(1) rotate(0);}
+        }
+        .demo{
+            -moz-animation:mini 0.8s 3 linear;
+            -webkit-animation:mini 0.8s 3 linear;
+            -ms-animation:mini 0.8s 3 linear;
+            -o-animation:mini 0.8s 3 linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="img"><img src="images/bg2.jpg" width="985" height="720"></div>
+    <div class="lan demo">
+        <p style="font-size: 20px;font-family: '微软雅黑'">往前走，不回头</p>
+        <p style="font-size: 14px;font-family: '微软雅黑';text-align: right">Keep moving‥‥‥</p>
+        <p style="font-size: 14px;font-family: '微软雅黑';text-align: right">——Elmer</p>
+    </div>
+</body>
+</html>

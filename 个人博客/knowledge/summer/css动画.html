@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css动画</title>
+    <style>
+        body{
+            width: 1000px;
+            min-height: 600px;
+            background: #111;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: #00ADEF;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            color: #e8e8e8;
+        }
+        @-moz-keyframes mini{
+            0%{opacity: 0.25}
+            30%{transform: translateX(500px)}
+            60%{transform: translateY(200px);transform:rotate(0deg);background: red; opacity: 0.5}
+            100%{transform: rotate(360deg); background: blueviolet;opacity: 1}
+        }
+        @-webkit-keyframes mini{
+            /*0%{opacity: 0.25}
+            30%{transform: scale(1)}
+            60%{transform: scale(0.5) rotate(0deg);background: red; opacity: 0.5}
+            100%{transform: scale(1) rotate(360deg); background: blueviolet;opacity: 0.25}
+
+            0% {transform: scale(1);}
+            10%, 20% {transform: scale(0.9) rotate(-3deg);}
+            30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+            40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+            100% {transform: scale(1) rotate(0);}*/
+            0%{opacity: 0.25}
+            30%{transform: translateX(500px)}
+            60%{transform: translateY(200px);transform:rotate(0deg);background: red; opacity: 0.5}
+            100%{transform: rotate(360deg); background: blueviolet;opacity: 1}
+        }
+        .demo{
+            -moz-animation:mini 1s linear;		 
+            -webkit-animation:mini 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="box demo">
+        324234
+    </div>
+
+</body>
+</html>

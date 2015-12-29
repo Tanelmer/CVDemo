@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--当前页面的三要素-->
+    <title>选项卡切换</title>
+    <meta name="Keywords" content="关键词,关键词">
+    <meta name="description" content="">
+    <!--css,js-->
+    <link href="css/all.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .yk-head{
+            background-color:#268bd2;
+            margin-right:auto;
+            margin-left:auto;
+            margin-top:100px;
+            width:520px;
+            height:30px;
+        }
+        .yk-head ul li{
+            float:left;
+            height:30px;
+        }
+        .yk-head ul li a{
+            display:block;
+            line-height:30px;
+            text-decoration:none;
+            color:#e8e8e8;
+            padding:0 20px 0 20px;
+        }
+        .yk-body{
+            margin-right:auto;
+            margin-left:auto;
+            width:520px;
+            height:200px;
+        }
+        .yk-body div{
+            margin-right:auto;
+            margin-left:auto;
+            width:520px;
+            height:200px;
+            display:none;
+            float:left;
+        }
+        .yk-body .one{
+            display:block;
+        }
+        .yk-body div:nth-child(1){
+            background-color:#06A7A5;
+        }
+        .yk-body div:nth-child(2){
+             background-color:#06A856;
+         }
+        .yk-body div:nth-child(3){
+            background-color:#00C176;
+        }
+        .yk-body div:nth-child(4){
+            background-color:#24C2C7;
+        }
+        .yk-body div:nth-child(5){
+            background-color:#4a226d;
+        }
+        .current{
+            background-color: #06A7A5;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="yk-head">
+        <ul>
+            <li class="current"><a href="javascript:void(0)">选项卡一</a></li>
+            <li><a href="javascript:void(0)">选项卡二</a></li>
+            <li><a href="javascript:void(0)">选项卡三</a></li>
+            <li><a href="javascript:void(0)">选项卡四</a></li>
+            <li><a href="javascript:void(0)">选项卡五</a></li>
+        </ul>
+    </div>
+    <div class="yk-body">
+        <div class="one">1111111</div>
+        <div>222222</div>
+        <div>3333333</div>
+        <div>444444</div>
+        <div>55555</div>
+    </div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+    //拿到兼容ie和chrom火狐的背景颜色值
+    $.fn.getHexBackgroundColor = function() {
+        var rgb = $(this).css('background-color');
+        if(!$.browser.msie){
+            rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            function hex(x) {
+                return ("0" + parseInt(x).toString(16)).slice(-2);
+            }
+            rgb= "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+        }
+        return rgb;
+    }
+
+    $(function(){
+        $(".yk-head").find("li").click(function(){
+            //$(this).addClass("current").siblings().removeClass("current");
+            //var num=$(this).index();
+            //alert(num);
+            //$(".yk-body").find("div").hide().eq(num).show();
+            //$(this).css("background",);
+            var num=$(this).index();
+            var bgcolor=$(".yk-body").find("div").eq(num).getHexBackgroundColor();
+            var headbg=$(".yk-head").getHexBackgroundColor();
+            console.log(bgcolor);
+            $(this).css("background-color",bgcolor).siblings().css("background-color",headbg);
+            //$(this).find("a").css("color","#e8e8e8");
+            $(".yk-body").find("div").hide().eq(num).show();
+        });
+    })
+
+</script>
+</body>
+</html>

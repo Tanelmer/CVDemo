@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>论坛页面 -就业网项目实战</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{height:1500px;background:#fff;font-size:16px;font-family:"微软雅黑";}
+			/*fixed start */
+			/*f nav start*/
+			#music{filter:alpha(opacity=20);-moz-opacity:0.2;-khtml-opacity: 0.2;opacity: 0.2;position:fixed;right:0;}
+			#Fixed{background:#fff;width:100%;height:90px;border-top:2px solid #330000;border-bottom:1px solid #666;position:fixed;top:0px;z-index:3;}
+			.fixed_r{width:50px;height:50px;position:fixed;right:30px;bottom:155px;background: #666;cursor:pointer;text-align:center;border-radius:3px;display:none;}
+			.fixed_s{width:115px;height:168px;position:fixed;right:0px;bottom:0;}
+			.fixed_r img{padding-top:13px;}
+			.fixed_r:hover{background:#000;}
+			.fixed{margin-left:20px;}
+			.fixed .f_img{width:400px;height:72px;}
+			.fixed .f_img .img2{margin:10px 0 10px 0;}
+			.fixed .f_nav{height:80px;float:left;position:fixed;right:300px;top:6px;}
+			.fixed ul li{margin-top:30px;height:21px;list-style:none;float:left;padding:1px 40px 0px 40px;}
+			.fixed ul li a{line-height:21px;height:21px;text-decoration:none;font-size:16px;font-family:"微软雅黑";color:#666;font-weight:bolder;text-align:center;}
+			.fixed ul .f_first{color:green;}
+			.fixed ul li a:hover{color:#FF0066;}
+			/*f nav end*/
+			/*f load start*/
+			.fixed .f_load{position:fixed;top:36px;right:20px;}	
+			.fixed .f_load a{text-decoration:none;color:#666;font-family:"微软雅黑";font-weight:bold;}
+			.fixed .f_load span{padding:0px 15px 0 15px;}
+			.fixed .f_load a:hover{color:#FF0066;}
+			.img{height:100px;padding:110px 0 0 100px;}
+			/*f load end*/
+
+			/*head end*/
+			#head{margin-left:40px;}
+			#head .search_t{width:1346px;height:60px;position:relative;}
+			#head .search_t span{float:left;margin-left:60px;font-weight:bolder;}
+			#head .search_t span a{height:30px;text-decoration:none;color:#000;}
+			#head .search_b{width:1123px;height:60px;border:1px solid #666;margin-left:60px;}
+			#head .search_b ul{list-style:none;}
+			#head .search_b ul li{float:left;padding:20px 0px 0 45px;}
+			#head .search_b li a{text-decoration:none;color:#666;}
+			#head .search_b li a:hover{text-decoration:underline;color:#000;}
+			#head .s_input{float:right;margin:0 160px 0 10px;}
+			#head .s_input .input{float:left;}
+			#head .s_input .i_two{width:200px;height:30px;text-align:left;line-height:30px;font-size:14px;font-family:"微软雅黑";color:#666;}
+			#head .s_input .i_btn{margin:-2px 0 0 2px;float:left;text-align:center;width:85px ;height:33px ;background:#FFCC66;border:2px solid #fff;border-radius:3px;}
+			#head .s_input .i_btn a{display:block;width:85px ;height:33px;text-decoration:none;line-height:32px;color:#fff;}
+			/*head end*/
+		</style>
+
+	</head>
+<body>
+	<div id = "Fixed">
+				<audio src = "music/李荣浩-李白.mp3" controls id = "music" ></audio>
+				<div class = "fixed">
+				<div class  = "f_img">
+				<img src = "images/logo.png" width = "162" height  = "72" alt = "logo"/>
+				<img  class = "img2"src = "images/biaoyu.gif" width =  "188" height = "42" alt = "gif"/>
+				</div>
+				<div class = "f_nav">
+					<ul>
+						<li><a href = "../index.html">首页</a></li>
+						<li><a href = "zhaopin.html">招聘会</a></li>
+						<li><a href = "xuanjiang.html">宣讲会</a></li>
+						<li><a href = "findjob.html">找工作</a></li>
+						<li><a href = "javascript:void(0)" class = "f_first">论坛</a></li>
+					</ul>
+				</div>
+				<div class = "f_load">
+					<span><a href = "#">登录</a></span>|<span><a href = "#">注册</a></span>
+				</div>
+			</div>
+			<div class = "fixed_r">
+				<img src = "images/top.png" width = "28"height = "28"alt  = "top">
+			</div>
+			<div class = "fixed_s">
+				<img src = "images/erweima.gif" width = "115"height = "168"alt  = "erweima">
+			</div>
+	</div>
+	<div id = "all">
+		<div class = "img"><img src = "images/122.jpg" width = "1124" height  = "80" alt = "emler"/></div>
+	</div>
+	<div id ="head"> 
+		<div class = "search_t">
+			<span>
+				<a href = "#">Elmer制作</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href = "#">找工作</a>&nbsp;&nbsp;>
+			</span>
+			<div class = "s_input">
+				<div class = "input">
+					<input class = "i_two"type = "text" placeholder = "请输入关键词" >
+				</div>
+				<div class = "i_btn">
+					<a href = "#">搜索</a>
+				</div>
+			</div>
+			<div class = "s_btn"></div>
+		</div>
+	</div>
+	<div id ="con">
+		<div class = "c_left">
+			<div class = "c_top">
+				
+			</div>
+			<div class = "c_bottom"></div>
+		</div>
+		<div class = "c_right"></div>
+	</div>
+
+<script type = "text/javascript" src = "js/jquery-1.11.2.js"></script>
+<script type = "text/javascript">
+	$(function(){
+		$(window).scroll(function(){
+			if($(window).scrollTop()>=400){
+				$(".fixed_r").fadeIn(400);
+			}else{
+				$(".fixed_r").fadeOut(400);
+			}
+		});
+		$(".fixed_r").click(function(){
+			$("html,body").animate({
+				scrollTop:0
+			},"slow");
+		});	
+	});
+
+
+</script>
+</body>
+</html>

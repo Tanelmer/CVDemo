@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>html模板</title>
+    <meta name="Keywords" content="关键词,关键词">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="theme/ambiance.css">
+    <script src="js/codemirror.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/css.js"></script>
+    <script src="js/htmlmixed.js"></script>
+    <script src="js/xml.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #preview{
+            width: 661px;
+            min-height: 895px;
+            position: absolute;
+            left: 684px;
+            top: 0px;
+        }
+        a{
+            font-family: "微软雅黑";
+            text-decoration: none;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 613px;
+            z-index: 111;
+            color: #fff;
+            background: #111;
+        }
+    </style>
+</head>
+<body>
+<!--html-->
+<textarea id="htmleditor">
+    <!doctype html>
+    <html>
+    <head lang="en">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>html模板</title>
+        <meta name="Keywords" content="关键词,关键词">
+        <meta name="description" content="">
+    </head>
+    <body>
+        <h1>代码实时预览</h1>
+    </body>
+    </html>
+</textarea>
+<!--css-->
+<textarea id="csseditor">
+    <style type="text/css">
+        *{margin:0;padding:0;}
+    </style>
+</textarea>
+<!--js-->
+<textarea id="jseditor">
+    <script type="text/javascript">
+
+    </script>
+</textarea>
+<script>
+    /*js*/
+    var editorDom=document.getElementById("jseditor");
+    var params={
+        mode:"javascript",
+        lineNumbers:true,
+        tabSize:2,
+        theme:"ambiance"
+    };
+    var jsMirror=CodeMirror.fromTextArea(editorDom,params);
+    /*html*/
+    var editorDom=document.getElementById("htmleditor");
+    var params={
+        mode:"htmlmixed",
+        lineNumbers:true,
+        tabSize:2,
+        theme:"ambiance"
+    };
+    var htmlMirror=CodeMirror.fromTextArea(editorDom,params);
+
+    /*css*/
+    var editorDom=document.getElementById("csseditor");
+    var params={
+        mode:"css",
+        lineNumbers:true,
+        tabSize:2,
+        theme:"ambiance"
+    };
+    var cssMirror=CodeMirror.fromTextArea(editorDom,params);
+
+    window.onload = function(){
+        cssMirror.on("change",function(){
+            setPreview();
+            setDate();
+        });
+        htmlMirror.on("change",function(){
+            setPreview();
+            setDate();
+        });
+        if(window.localStorage){
+            var htmldate=localStorage.getItem("html_editor_date");
+            var jsdate=localStorage.getItem("js_editor_date");
+            var cssdate=localStorage.getItem("css_editor_date");
+            htmlMirror.setValue(htmldate);
+            jsMirror.setValue(jsdate);
+            cssMirror.setValue(cssdate);
+        };
+    }
+    /*function*/
+    function getSource(){
+        alert(htmlMirror.getValue());
+    }
+    function setPreview(){
+        var htmlsource = htmlMirror.getValue();
+        var jssource = jsMirror.getValue();
+        var csssource = cssMirror.getValue();
+        var iframe = window.frames["preview"];
+        preview.document.open();
+        preview.document.write(htmlsource);
+        preview.document.write(jssource);
+        preview.document.write(csssource);
+        preview.document.close();
+    }
+    function setDate(){
+        var htmlsource = htmlMirror.getValue();
+        var jssource = jsMirror.getValue();
+        var csssource = cssMirror.getValue();
+        if(window.localStorage){
+            localStorage.setItem("html_editor_date",htmlsource);
+            localStorage.setItem("js_editor_date",jssource);
+            localStorage.setItem("css_editor_date",csssource);
+        }
+    }
+</script>
+<!--实时预览-->
+<iframe id="preview" name="preview">
+
+</iframe>
+<a href="#" onclick="setPreview(this)">点击预览</a>
+</body>
+</html>

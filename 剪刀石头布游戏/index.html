@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head lang="en">
+    <!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--当前页面的三要素-->
+    <title>剪刀石头布</title>
+    <meta name="Keywords" content="关键词,关键词">
+    <meta name="description" content="">
+    <meta name="author" content="elmer">
+    <!--css,js-->
+    <style type="text/css">
+       *{
+           margin:0;
+           padding:0;
+       }
+	   img{
+			cursor:pointer;
+	   }
+       body,span{
+           font-family: "微软雅黑";
+       }
+       .paly>img,.comp>img{
+            vertical-align: middle;
+       }
+        .main{
+            margin: 100px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <h2>来，选择你要出的是···</h2>
+    <!--玩家选择-->
+    <div class="selection">
+        <img id="jiandao" src="jiandao.jpg">
+        <img id="shitou" src="shitou.jpg">
+        <img id="bu" src="bu.jpg">
+    </div>
+    <!--玩家选择的结果-->
+    <div class="paly">
+        <span>你出的是···</span>
+        <img id="my-sec">
+    </div>
+    <!--电脑随机的结果-->
+    <div class="comp">
+        <span>电脑出的是···</span>
+        <img id="comp-sec">
+    </div>
+    <!--最后赢家显示-->
+    <p>结果是···<span id="result" class="result"></span></p>
+</div>
+<script type="text/javascript">
+    /*封装 id*/
+    function $id(id) {
+        return document.getElementById(id);
+    }
+    var $jiandao = $id("jiandao");
+    var $shitou = $id("shitou");
+    var $bu = $id("bu");
+    /*玩家点击剪刀*/
+    $jiandao.onclick = function () {
+        $id("my-sec").src= this.src;
+        var $comp = Math.random();
+        if($comp<0.33){
+            /*剪刀*/
+            $id("comp-sec").src=this.src;
+            $id("result").innerHTML= "平局。";
+			$id("result").style.background = "yellow";
+			$id("result").style.color = "#111";
+        }else if($comp<0.67){
+            /*石头*/
+            $id("comp-sec").src=$id("shitou").src;
+            $id("result").innerHTML= "你输了。";
+			$id("result").style.background = "#fff";
+			$id("result").style.color = "#111";
+        }else{
+            /*布*/
+            $id("comp-sec").src=$id("bu").src;
+            $id("result").innerHTML= "你赢了。";
+			$id("result").style.background = "red";
+			$id("result").style.color = "#e8e8e8";
+        }
+    }
+    /*玩家点击石头*/
+    $shitou.onclick = function () {
+        $id("my-sec").src= this.src;
+        var $comp = Math.random();
+        if($comp<0.33){
+            /*剪刀*/
+            $id("comp-sec").src=this.src;
+            $id("result").innerHTML= "你赢了";
+			$id("result").style.background = "red";
+			$id("result").style.color = "#e8e8e8";
+        }else if($comp<0.67){
+            /*石头*/
+            $id("comp-sec").src=$id("shitou").src;
+            $id("result").innerHTML= "平局";
+			$id("result").style.background = "yellow";
+			$id("result").style.color = "#111";
+        }else{
+            /*布*/
+            $id("comp-sec").src=$id("bu").src;
+            $id("result").innerHTML= "你输了。";
+			$id("result").style.background = "#fff";
+			$id("result").style.color = "#111";
+        }
+    }
+    $bu.onclick = function () {
+        $id("my-sec").src= this.src;
+        var $comp = Math.random();
+        if($comp<0.33){
+            /*剪刀*/
+            $id("comp-sec").src=this.src;
+            $id("result").innerHTML= "你输了";
+						$id("result").style.background = "#fff";
+			$id("result").style.color = "#111";
+        }else if($comp<0.67){
+            /*石头*/
+            $id("comp-sec").src=$id("shitou").src;
+            $id("result").innerHTML= "你赢了。";
+						$id("result").style.background = "red";
+			$id("result").style.color = "#e8e8e8";
+        }else{
+            /*布*/
+            $id("comp-sec").src=$id("bu").src;
+            $id("result").innerHTML= "平局。";
+						$id("result").style.background = "yellow";
+			$id("result").style.color = "#111";
+        }
+    }
+</script>
+</body>
+</html>

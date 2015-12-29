@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>找工作页面 -就业网项目实战</title>
+		<meta name="Keywords" content="2015毕业设计-大学生就业网站项目实战">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{height:1500px;background:#fff;font-size:16px;font-family:"微软雅黑";}
+			#all{margin:10px auto;}
+			/*fixed start */
+			/*f nav start*/
+			#music{filter:alpha(opacity=20);-moz-opacity:0.2;-khtml-opacity: 0.2;opacity: 0.2;position:fixed;right:0;}
+			#Fixed{background:#fff;width:100%;height:90px;border-top:2px solid #330000;border-bottom:1px solid #666;position:fixed;top:0px;z-index:3;}
+			.fixed_r{width:50px;height:50px;position:fixed;right:30px;bottom:155px;background: #666;cursor:pointer;text-align:center;border-radius:3px;display:none;}
+			.fixed_s{width:115px;height:168px;position:fixed;right:0px;bottom:0;}
+			.fixed_r img{padding-top:13px;}
+			.fixed_r:hover{background:#000;}
+
+			.fixed{margin-left:20px;}
+			
+			.fixed .f_img{width:400px;height:72px;}
+			.fixed .f_img .img2{margin:10px 0 10px 0;}
+			.fixed .f_nav{height:80px;float:left;position:fixed;right:300px;top:6px;}
+			.fixed ul li{margin-top:30px;height:21px;list-style:none;float:left;padding:1px 40px 0px 40px;}
+			.fixed ul li a{line-height:21px;height:21px;text-decoration:none;font-size:16px;font-family:"微软雅黑";color:#666;font-weight:bolder;text-align:center;}
+			.fixed ul .f_first{color:green;}
+			.fixed ul li a:hover{color:#FF0066;}
+			/*f nav end*/
+			/*f load start*/
+			.fixed .f_load{position:fixed;top:36px;right:20px;}	
+			.fixed .f_load a{text-decoration:none;color:#666;font-family:"微软雅黑";font-weight:bold;}
+			.fixed .f_load span{padding:0px 15px 0 15px;}
+			.fixed .f_load a:hover{color:#FF0066;}
+			.img{height:100px;padding:100px 0 0 100px;}
+			/*f load end*/
+			/*fixed end*/
+			/*head start */
+			/*head search input start*/
+			#head{margin-left:40px;}
+			#head .search_t{width:1346px;height:60px;position:relative;}
+			#head .search_t .s_btn{width:24px;height:28px;background:url("images/btn.png") no-repeat;position:absolute;top:3px;right:462px;cursor:pointer;}
+			#head .search_t span{float:left;margin-left:60px;font-weight:bolder;}
+			#head .search_t span a{height:30px;text-decoration:none;color:#000;}
+			#head .search_b{width:1123px;height:60px;border:1px solid #666;margin-left:60px;}
+			#head .search_b ul{list-style:none;}
+			#head .search_b ul li{float:left;padding:20px 0px 0 45px;}
+			#head .search_b li a{text-decoration:none;color:#666;}
+			#head .search_b li a:hover{text-decoration:underline;color:#000;}
+			#head .s_input{float:right;margin:0 160px 0 10px;}
+			#head .s_input .input{float:left;}
+			#head .s_input .i_two{width:200px;height:30px;text-align:left;line-height:30px;font-size:14px;font-family:"微软雅黑";color:#666;}
+			#head .s_input .i_one{width:80px;height:30px;text-align:left;line-height:30px;font-size:14px;font-family:"微软雅黑";color:#666;}
+			#head .s_input .i_btn{margin:-2px 0 0 2px;float:left;text-align:center;width:85px ;height:33px ;background:#FFCC66;border:2px solid #fff;border-radius:3px;}
+			#head .s_input .i_btn a{display:block;width:85px ;height:33px;text-decoration:none;line-height:32px;color:#fff;}
+			
+			/*head search input end*/
+			/*head box start*/
+			#head .box{display:none;float:right;border:1px solid #666;width:400px;height:340px;position:absolute;top:260px;right:105px;background:#fff;}
+			#head .box .b_one{width:400px;height:160px;border-bottom:1px solid #666;margin-bottom:10px;}
+			#head .box .b_one .cs{width:400px;height:20px;border-bottom:1px solid #666;margin:10px 0 0 0 ;}
+			#head .box .b_one .cs span{float:left;height:20px;line-height:10px;color:#666;font-weight:bold;}
+			#head .box .b_one .cs .close{float:right;width:77px;height:18px;border:1px solid #FF6666;margin:-5px 5px 0 0 ;}
+			#head .box .b_one .cs .close a{text-align:center;line-height:18px;}
+			#head .box .b_one .cs .close:hover{background:#FFAC59;}
+			#head .box table{margin:10px 0 0 0px;}
+			#head .box .b_one a{text-align:center;display:block;width:77px;height:21px;text-decoration:none;color:#666;font-size:14px;font-family:"微软雅黑";}
+			#head .box .b_two{width:400px;height:160px;}
+			#head .box .b_two .sq{width:400px;height:20px;border-bottom:1px solid #666;margin:10px 0 0 0 ;}
+			#head .box .b_two .sq span{float:left;height:20px;line-height:10px;color:#666;font-weight:bold;}
+			#head .box .b_two a{text-align:center;display:block;width:77px;height:21px;text-decoration:none;color:#666;font-size:14px;font-family:"微软雅黑";}
+			#head .box td:hover{background:#FFAC59;}
+			/*head box end*/
+			/*head end */
+			#con{width:1124px;height:613px;margin:25px 0 0 100px;}
+			#con ul{list-style:none;}
+			#con .con_left{float:left;width:921px;height:613px;border:1px solid #666;}
+			#con .con_right{float:left;width:200px;height:613px;border:1px solid #666;border-left:0;}
+			#con .con_left ul li{width:921px;height:30px;line-height:30px;list-style:none;border-bottom:1px dotted #666;}
+			#con .con_left ul li a{text-decoration:none;font-size:16px;color:#666;padding-left:40px;}
+			#con .con_left ul li a:hover{color:#CC3366;font-weight:bold;}
+			#con .con_left span{font-size:14px;color:#CC3366;float:right;padding-right:40px;}
+			#foot .f_foot{width:1123px;height:200px;text-align:center;line-height:50px;margin:10px 0 0 90px;}
+			#foot .f_foot a{text-decoration:none;color:#666;}
+			#foot .f_foot a:hover{color:red;}
+		</style>
+
+	</head>
+<body>
+	
+	<div id = "Fixed">
+		<audio src = "music/李荣浩-李白.mp3" controls id = "music"></audio>
+		<div class = "fixed">
+			<div class  = "f_img">
+			<img src = "images/logo.png" width = "162" height  = "72" alt = "logo"/>
+			<img  class = "img2"src = "images/biaoyu.gif" width =  "188" height = "42" alt = "gif"/>
+			</div>
+			<div class = "f_nav">
+				<ul>
+					<li><a href = "../index.html" >首页</a></li>
+					<li><a href = "zhaopin.html">招聘会</a></li>
+					<li><a href = "xuanjiang.html">宣讲会</a></li>
+					<li><a href = "javascript:void(0)"  class = "f_first">找工作</a></li>
+					<li><a href = "luntan.html">论坛</a></li>
+				</ul>
+			</div>
+			<div class = "f_load">
+				<span><a href = "#">登录</a></span>|<span><a href = "#">注册</a></span>
+			</div>
+		</div>
+		<div class = "fixed_r">
+			<img src = "images/top.png" width = "28"height = "28"alt  = "top">
+		</div>
+		<div class = "fixed_s">
+				<img src = "images/erweima.gif" width = "115"height = "168"alt  = "erweima">
+		</div>
+	</div>
+	<div id = "all">
+	<div class = "img"><img src = "images/1.jpg" width = "1124" height  = "80" alt = "emler"/></div>
+	<div id = "head">
+
+		<div class = "search_t">
+			<span>
+				<a href = "#">Elmer制作</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href = "#">找工作</a>&nbsp;&nbsp;>
+			</span>
+			<div class = "s_input">
+				<div class = "input">
+					<input class = "i_one"type = "text" placeholder = "地区" >
+					<i></i>
+					<input class = "i_two"type = "text" placeholder = "请输入搜索职业" >
+				</div>
+				<div class = "i_btn">
+					<a href = "#">搜索</a>
+				</div>
+			</div>
+			<div class = "s_btn"></div>
+		</div>
+		<div class = "box">
+			
+			<div class = "b_one">
+				<div class = "cs"><span>城市选择</span>
+					<div class = "close"><a href = "#">X 关闭窗口</a></div>
+				</div>
+				<table border = "0" width = "400" height = "100px" >
+					<tr>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+						<td><a href = "#">长沙</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class = "b_two">
+				<div class = "sq"><span>省区选择</span></div>
+				<table border = "0" width = "400" height = "100px" >
+					<tr>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+					</tr>
+					<tr>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+						<td><a href = "#">深圳</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class = "search_b">
+			<ul>
+				<li style = "font-weight:bolder">相关职位：</li>
+				<li><a href = "#">We前端工程师</a></li>
+				<li><a href = "#">网页设计</a></li>
+				<li><a href = "#">We前端工程师</a></li>
+				<li><a href = "#">We前端工程师</a></li>
+				<li><a href = "#">Ajax</a></li>
+				<li><a href = "#">Jquery</a></li>
+				<li><a href = "#">html/css</a></li>
+				<li><a href = "#">移动互联</a></li>
+			</ul>
+		
+		</div>
+	</div>
+	<div id = "con">
+		<div class= "con_left">
+			<div class = "c_title" style= "height:40px;line-height:40px;margin-left:20px;color:#c36;">招聘信息|职位推荐</div>
+			<ul>
+				<li style = "border-top:1px dotted #666;"><a href  = "#">尚科博文北京教育咨询招课程顾问</a><span>2015-04-18</span></li>
+				<li><a href  = "#">昆明风起文化传播公司招销售代表</a><span>2015-04-18</span></li>
+				<li><a href  = "#">广州颖然贸易公司招业务区域经理</a><span>2015-04-18</span></li>
+				<li><a href  = "#">尚科博文北京教育咨询招课程顾问</a><span>2015-04-18</span></li>
+				<li><a href  = "#">昆明风起文化传播公司招销售代表</a><span>2015-04-18</span></li>
+				<li><a href  = "#">广州颖然贸易公司招业务区域经理</a><span>2015-04-18</span></li>
+				<li><a href  = "#">尚科博文北京教育咨询招课程顾问</a><span>2015-04-18</span></li>
+				<li><a href  = "#">昆明风起文化传播公司招销售代表</a><span>2015-04-18</span></li>
+				<li><a href  = "#">广州颖然贸易公司招业务区域经理</a><span>2015-04-18</span></li>
+				<li><a href  = "#">昆明风起文化传播公司招销售代表</a><span>2015-04-18</span></li>
+				<li><a href  = "#">广州颖然贸易公司招业务区域经理</a><span>2015-04-18</span></li>
+				<li><a href  = "#">昆明风起文化传播公司招销售代表</a><span>2015-04-18</span></li>
+				<li><a href  = "#">广州颖然贸易公司招业务区域经理</a><span>2015-04-18</span></li>
+				<li><a href  = "#">昆明风起文化传播公司招销售代表</a><span>2015-04-18</span></li>
+				<li><a href  = "#">广州颖然贸易公司招业务区域经理</a><span>2015-04-18</span></li>
+				<li><a href  = "#">昆明风起文化传播公司招销售代表</a><span>2015-04-18</span></li>
+				<li><a href  = "#">广州颖然贸易公司招业务区域经理</a><span>2015-04-18</span></li>
+			</ul>
+
+		</div>
+		<div class= "con_right">
+			<div class = "r_top">
+				<img src = "images/right.png" alt = "right" width = "198" height = "322"/>
+			</div>
+			<div class = "r_con">
+				<img src = "images/32.jpg" alt = "right" width = "198" height = "122"/>
+			</div>
+			<div class = "r_bottom">
+				<img src = "images/1.png" alt = "right" width = "198" height = "100"/>
+				<p style = "color:#CC3300;">秀逗了，logo各种换，没点办法</p>
+			</div>
+		</div>
+	</div>
+	<div id = "foot">
+		<div class = "f_foot">
+	
+			<p><a href = "#">关于我们[About Us]</a> | <a href = "#">合作伙伴</a> | <a href = "#">出版物</a> | <a href = "#">手机客户端</a> | <a href = "#">友情链接</a> | <a href = "#">企业服务方案</a> | <a href = "#">联系我们</a> | <a href = "#">关注我们</a> </p>
+			<p>Copyright&copy;潭州学院Elmer 版权所有</p>
+		</div>
+	
+	</div>
+</div>
+<script type = "text/javascript" src = "js/jquery-1.11.2.js"></script>
+<script>
+	$(function(){
+		//地区盒子点击显示和隐藏
+		$("#head").find(".s_btn").click(function(){
+			$(".box").toggle("slow");
+		});
+		$(".close").click(function(){
+			$(".box").hide("slow");
+		});
+		//回到顶部button
+		$(window).scroll(function(){
+			if($(window).scrollTop()>=400){
+				$(".fixed_r").fadeIn(400);
+			}else{
+				$(".fixed_r").fadeOut(400);
+			}
+		});
+		$(".fixed_r").click(function(){
+			$("html,body").animate({
+				scrollTop:0
+			},"slow");
+		});
+	});
+
+</script>
+</body>
+</html>

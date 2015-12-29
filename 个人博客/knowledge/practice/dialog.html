@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>弹出层</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 14px;
+            font-family: "微软雅黑";
+        }
+        #dialog{
+            width: 360px;
+            height: 270px;
+            border: 2px solid #666666;
+            border-radius: 5px;
+            background: #111111;
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+        h1{
+            padding-left: 10px;
+            font-family: "微软雅黑";
+            font-size: 14px;
+            background: #111;
+            color: #eeeeee;
+            height: 26px;
+            line-height: 35px;
+        }
+        .content{
+            margin: 10px 10px;
+            background: #eeeeee;
+            height: 186px;
+            line-height: 186px;
+            text-align: center;
+        }
+        .btns{
+            background: #111111;
+            text-align: center;
+        }
+        .btns a:hover{
+            color: #0099cc;
+        }
+        .btn{
+            margin: 0 10px;
+            padding: 0 10px;
+            text-align: center;
+            border: 1px solid #eeeeee;
+            display: inline-block;
+            height: 26px;
+            line-height: 26px;
+            width: 50px;
+            color: #eeeeee;
+            text-decoration: none;
+        }
+        .over{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #111111;
+            z-index: 1;
+            filter:alpha(opacity=58);
+            -moz-opacity:0.58;
+            -webkit-opacity:0.58;
+            -khtml-opacity:0.58;
+            opacity:0.58;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:void(0)" onclick="Myalert();">弹出alert</a>
+    <a href="javascript:void(0)" onclick="Myconfirm();">弹出confirm</a>
+
+<script>
+    /*
+        插件名称：弹出层
+        描述：封装一个弹出层
+        三要素：定位 left top
+        用到的知识点：dom操作，参数传递 闭包 回调函数 动态扩展 对象传递
+        写插件要点：动态把元素添加到dom节点中
+        call的用法
+
+        function test(){
+            alert(this.username);
+        }
+        var json ={username:"elmer"};
+        test.call(json);
+
+    //  等价于
+        var json = {
+            username:"keke",
+            test:function(){
+                alert(this.username);
+            }
+        }
+
+    //  call就是动态将函数绑定到对象并且执行
+    */
+
+    var Mydialog = (function(){
+        var dialog={
+            default:{
+                title:"标题：",
+                content:"内容。。",
+                sure:"确定",
+                cancel:"取消"
+            },
+            alert:function(opts){
+                var dialogDom = this.template(opts);
+                var dialogDom = document.getElementById("dialog");
+                var btnsDom = dialogDom.getElementsByClassName("btns")[0];
+                var cancelDom = btnsDom.getElementsByClassName("cancel")[0];
+                btnsDom.removeChild(cancelDom);
+            },
+            confirm:function(opts){
+                this.template(opts);
+            },
+            template:function(opts){
+              opts =extend({},this.default,opts);
+              var bodyDom = document.body;
+              var dialogDom = document.createElement("div");
+              dialogDom.id = "dialog";
+              dialogDom.innerHTML =
+                "<div id='dialog'>"+
+                    "<h1>"+opts.title+"</h1>"+
+                    "<div class='content'>"+opts.content+"</div>"+
+                    "<div class='btns'>"+
+                    "   <a href='javascript:void(0);' class='btn sure' onclick='save();'>"+opts.sure+"</a>"+
+                    "   <a href='javascript:void(0);' class='btn cancel' onclick='save();'>"+opts.cancel+"</a>"+
+                    "</div>"+
+                "</div>"+
+                "<div class='over'></div>";
+                //bodyDom.innerHTML+=html;
+                bodyDom.appendChild(dialogDom);
+                return dialogDom;
+
+            }
+
+        };
+        return dialog;
+    })();
+    function save() {
+        var dialogDom = document.getElementById("dialog");
+        dialogDom.style.visibility = "hidden";
+    }
+    function Myalert(){
+       Mydialog.alert({title:"test标题标题"});
+    }
+    function Myconfirm(){
+        Mydialog.confirm({content:"test内容内容"});
+    }
+    //动态参数后面往前覆盖，往后继承取并集
+    //用户传递级别最高
+    function extend(target,source) {
+        var args = Array.prototype.slice.call(arguments);//把参数转换成数组
+        //mark是最后一个参数，它的默认值是true：true表示相同属性会合并覆盖，false表示往target对象里追加
+        var mark =args[args.length-1]==="boolean"?args.pop():true;//删除最后一个元素并弹出
+        var i =1;
+        if(args.length==1){
+            i=-1;
+            //target == null?{}:target;
+        }
+        while((source=args[i++])){// undefinde null "" false
+            for(var key in source){
+                if(mark||!(key in target)){
+                    target[key]=source[key];
+                }
+            }
+        }
+        return target;
+    }
+
+    //对象的合并 extend
+    /*var defaults ={
+     title:"标题：",
+     content:"内容。。",
+     sure:"确定",
+     cancel:"取消"
+     };
+     var user1 ={
+     title:"用户标题1：",
+     callback:function(){
+
+     }
+     };
+     var user2 ={
+     title:"用户标题22：",
+     sure:"确定22",
+     content:"内容22222。。",
+     callback:function(){
+
+     }
+     };
+     var newj = extend(defaults,user1,user2);
+     console.log(newj);
+     */
+</script>
+</body>
+</html>
