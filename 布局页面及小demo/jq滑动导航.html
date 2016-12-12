@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>滑动导航</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+		<link href="css/all.css" rel="stylesheet" type="text/css">
+		<!--css,js-->
+		<style type="text/css">
+			.nav{
+				width:780px;
+				height:36px;
+				position:relative;
+				margin:100px auto;
+				border-radius:5px;
+				border-bottom:3px solid #888;
+				background:#eee;
+			}
+			.nav ul li{
+				float:left;
+				height:30px;
+				width:60px;
+				line-height:30px;
+				text-align:center;
+				border-radius:5px;
+			}
+			.nav ul li a{
+				color:#111;
+			}
+			.nav ul li:hover{
+				background:#111;
+				transition:all 0.5s linear;
+			}
+			.nav ul li:hover a{
+				color:#e8e8e8;
+				transition:all 0.1s linear;
+			}
+			.dot{
+				position:absolute;
+				top:36px;
+				left:0;
+				width:60px;
+				border-bottom:3px solid #111;
+			}
+
+		</style>
+
+	</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="#">Java</a></li>
+			<li><a href="#">Css</a></li>
+			<li><a href="#">Html</a></li>
+			<li><a href="#">Js</a></li>
+			<li><a href="#">Php</a></li>
+			<li><a href="#">Jsp</a></li>
+			<li><a href="#">我想</a></li>
+			<li><a href="#">要变</a></li>
+			<li><a href="#">很强</a></li>
+			<li><a href="#">很强！</a></li>
+			<li><a href="#">加油</a></li>
+			<li><a href="#">哦哟</a></li>
+			<li><a href="#">Fuck</a></li>
+		</ul>
+		<p class="dot"></p>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+				$(".nav").find("li").hover(function(){
+					var  remain_left = ($(window).width()-780)/2;
+					var _left = $(this).offset().left-remain_left;
+					$(".nav").find(".dot").animate({left:_left},10);
+				})
+		});	
+		
+	</script>
+
+
+</body>
+</html>

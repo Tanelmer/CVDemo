@@ -1,0 +1,440 @@
+﻿@charset "utf-8";
+/*css document*/
+/*css begin*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑";
+    font-size: 12px;
+    background: rgba(246, 113, 106, 0.9);
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+img {
+    border: 0;
+}
+
+/*default end*/
+.topbar {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    background: #ffffff;
+    color: pink;
+    text-align: center;
+}
+/*topbaer end*/
+header {
+    background: url("../myimg/top1.jpg");
+    width: 100%;
+    height: 315px;
+    margin: 50px auto;
+}
+
+.article {
+    width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.article .photo {
+    width: 175px;
+    height: 175px;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+
+.article .photo img {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+
+.article .intro {
+    position: absolute;
+    top: 70px;
+    left: 200px;
+    opacity: 0.8;
+    border: 1px solid #e2e2e2;
+    background: #e2e2e2;
+    border-radius: 5px;
+}
+
+.article .intro p {
+    text-indent: 2em;
+    width: 325px;
+    height: 90px;
+    color: #666;
+    line-height: 30px;
+    text-shadow: #3fe 1px 1px 1px;
+    text-align: left;
+}
+
+.ref {
+    position: absolute;
+    top: 225px;
+    left: 0px;
+    font-size: 30px;
+    font-family: "微软雅黑";
+    color: #444;
+    -webkit-box-reflect: below -3px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(black));
+    -moz-box-reflect: below -3px -moz-gradient(linear, 0 0, 0 100%, from(transparent), to(black));
+    -ms-box-reflect: below -3px -ms-gradient(linear, 0 0, 0 100%, from(transparent), to(black));
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 265px;
+    left: 0;
+    background: rgba(246, 113, 106, 0.7);
+}
+
+.navcon {
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.navcon li {
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    margin: 0px 30px;
+}
+
+.navcon li > a {
+    color: #e2e2e2;
+}
+
+.navcon li > a:hover {
+    color: #F5726A;
+}
+
+/*header end*/
+.wall {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(246, 113, 106, 1);
+}
+
+.wall .wallcon {
+    width: 1000px;
+    margin: auto;
+    background: #e2e2e2;
+    overflow: hidden;
+}
+
+.wallcon li {
+    float: left;
+    position: relative;
+}
+
+.wallcon li h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    font-weight: normal;
+    line-height: 24px;
+    color: #666;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    opacity: 0.1;
+    -webkit-transition: opacity .35s, -webkit-transform .35s;
+    -moz-transition: opacity .35s, -moz-transform .35s;
+    -ms-transition: opacity .35s, -ms-transform .35s;
+}
+
+.text {
+    width: 230px;
+    padding: 0px 10px;
+    line-height: 30px;
+    text-indent: 2em;
+}
+
+.wallcon img {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
+}
+
+.wallcon li:hover h2 {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    opacity: 1;
+    letter-spacing: 2px;
+}
+
+.wallcon li:hover img {
+    opacity: 0.6;
+}
+
+/*wall end*/
+.us {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0px;
+    background: #E7E0E3;
+    border-bottom: 1px solid rgba(246, 113, 106, 1);
+}
+
+.us_main {
+    width: 1000px;
+    margin: auto;
+}
+
+.m_title {
+    font-size: 20px;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.girl {
+    width: 100%;
+    height: 150px;
+}
+
+.g_pic, .g_speech {
+    float: left;
+}
+
+.g_pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.g_speech {
+    width: 60%;
+    height: 100px;
+    margin: 25px 70px;
+    background: pink;
+    border-radius: 5px;
+    position: relative;
+}
+
+.g_speech p {
+    color: #e7e1cd;
+    font-size: 20px;
+    font-family: cursive;
+    text-indent: 2em;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.g_speech p::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent pink transparent;
+    position: absolute;
+    left: -20px;
+    top: 30px;
+}
+
+.boy {
+    width: 100%;
+    height: 150px;
+}
+
+.b_speech, .b_pic {
+    float: right;
+}
+
+.b_pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.b_speech {
+    width: 60%;
+    height: 100px;
+    margin: 25px 70px;
+    background: #E7E18E;
+    border-radius: 5px;
+    position: relative;
+}
+
+.b_speech p {
+    color: #666;
+    font-size: 20px;
+    font-family: cursive;
+    text-indent: 2em;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.b_speech p::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent #E7E18E transparent;
+    position: absolute;
+    right: -20px;
+    top: 30px;
+}
+
+/*us end*/
+.memory {
+    width: 100%;
+    padding: 50px 0px;
+    position: relative;
+    border-bottom: 1px solid rgba(246, 113, 106, 1);
+}
+
+.me_picwall {
+    width: 1000px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 2px 2px rgb(246, 113, 106);
+
+}
+
+.me_picwall img {
+    width: 245px;
+    height: 180px;
+    padding: 10px 1px;
+    opacity: 0.7;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    z-index: 11;
+}
+
+.me_picwall img:hover {
+    transform: rotate(0) scale(1);
+    -moz-transform: rotate(0) scale(1);
+    -ms-transform: rotate(0) scale(1);
+    -webkit-transform: rotate(0) scale(1);
+    border-radius: 0;
+    opacity: 1;
+    z-index: 22;
+    box-shadow: 0px 0px 2px 2px rgb(246, 113, 106);
+}
+
+.me_text {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    margin: 48px auto;
+    font-size: 30px;
+    font-family: "微软雅黑";
+    color: #444;
+    z-index: 444;
+    -moz-box-reflect: below -3px -moz-gradient(linear, 0 0, 0 100%, from(transparent), to(black));
+    -webkit-box-reflect: below -3px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(black));
+    -ms-box-reflect: below -3px -ms-gradient(linear, 0 0, 0 100%, from(transparent), to(black));
+}
+
+/*memory end*/
+.reflect {
+    width: 100%;
+    padding-bottom: 50px;
+    background: #F6716A;
+}
+
+.comment {
+    width: 100%;
+    background: #111;
+    padding-bottom: 50px;
+}
+
+.comment .content {
+    width: 1000px;
+    margin: 0px auto;
+    color: #666;
+    background: url("../myimg/love.png") no-repeat left;
+}
+
+.spe {
+    width: 600px;
+    height: 120px;
+    float: right;
+    margin: 10px 0;
+    position: relative;
+}
+
+.c1_l {
+    text-align: center;
+    margin: 20px;
+}
+
+.c1_r {
+    margin: 25px 0 0 20px;
+}
+
+.c1_l, .c1_r {
+    float: left;
+}
+
+.c1_l > img {
+    border-radius: 100%;
+}
+
+.c1_r > p {
+    width: 400px;
+    padding: 25px 20px;
+    text-indent: 2em;
+    background: #aaddcc;
+    border-radius: 5px;
+}
+
+.c1_r p::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 20px 20px 0px;
+    border-color: transparent #adc transparent;
+    position: absolute;
+    left: 140px;
+}
+/*comment end*/
+.foot{
+    width: 100%;
+    background: #e8e8e8;
+}
+.f_con{
+    width: 1000px;
+    margin: auto;
+}
+.author{
+    font-family: cursive;
+    font-size: 18px;
+    color: #ff7549;
+    text-align: right;
+}

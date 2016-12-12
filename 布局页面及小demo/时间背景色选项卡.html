@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>优酷选项卡</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+		<!--css,js-->
+		<link href="css/all.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			.yk-head{
+				margin-right:auto;
+				margin-left:auto;
+				margin-top:100px;
+				width:520px;
+				height:30px;
+			}
+			.yk-head ul li{
+				float:left;
+				height:30px;
+			}
+			.yk-head ul li a{
+				display:block;
+				line-height:30px;
+				text-decoration:none;
+				color:#666;
+				padding:0 20px 0 20px;
+			}
+			.yk-head .current{
+				background:#06a7e1;
+			}
+			.yk-head .current a{
+				color:#fff;
+			}
+			.yk-body{
+				margin-right:auto;
+				margin-left:auto;
+				width:520px;
+				height:200px;
+			}
+			.yk-body div{
+				margin-right:auto;
+				margin-left:auto;
+				width:520px;
+				height:200px;
+				display:none;
+				float:left;
+			}
+			.yk-body .one{
+				display:block;
+			}
+			.yk-body div:nth-child(odd){
+				background:#06A7A5;
+			}
+			.yk-body div:nth-child(even){
+				background:#06A856;
+			}
+			/*让一个元素居中的一种时间方式*/
+			html,body{
+				height:100%;
+			}
+			#demo{
+				height:64px;
+				line-height:64px;
+				font-size:64px;
+				text-align:center;
+				position:relative;
+				top:50%;
+				margin-top:-32px;
+			}
+			/*让一个元素居中的一种时间方式*/
+		</style>
+		
+	</head>
+<body>
+	<div id="demo">#170808</div>
+<script type="text/javascript">
+	(function(){
+		/* 获取当前时间赋给body背景。*/
+		var timer =null,date,color;
+		var demoDom = document.getElementById("demo");
+		function drawtimer(){
+			date = new Date();
+			var h = date.getHours();
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+			h = (h<10?"0"+h:h);
+			m = (m<10?"0"+m:m);
+			s = (s<10?"0"+s:s);
+			color="#"+h+m+s;
+			document.body.style.background = color;
+			demoDom.innerText = color;
+			setTimeout(drawtimer,1000);
+		}
+		drawtimer();
+	})();
+
+</script>
+	<div class="yk-head">
+		<ul>
+			<li class="current"><a href="javascript:void(0)">选项卡一</a></li>
+			<li><a href="javascript:void(0)">选项卡二</a></li>
+			<li><a href="javascript:void(0)">选项卡三</a></li>
+			<li><a href="javascript:void(0)">选项卡四</a></li>
+			<li><a href="javascript:void(0)">选项卡五</a></li>
+		</ul>
+	</div>
+	<div class="yk-body">
+		<div class="one">1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+		$(function(){
+			$(".yk-head").find("li").hover(function(){
+				$(this).addClass("current").siblings().removeClass("current");
+				var num=$(this).index();
+				//alert(num);
+				$(".yk-body").find("div").hide().eq(num).show();
+			});
+		})
+	</script>
+	<script type="text/javascript">
+	(function(){
+		/* 获取当前时间赋给body背景。*/
+		var timer =null,date,color;
+		var demoDom = document.getElementById("demo");
+		function drawtimer(){
+			date = new Date();
+			var h = date.getHours();
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+			h = (h<10?"0"+h:h);
+			m = (m<10?"0"+m:m);
+			s = (s<10?"0"+s:s);
+			color="#"+h+m+s;
+			document.body.style.background = color;
+			demoDom.innerText = color;
+			setTimeout(drawtimer,1000);
+		}
+		drawtimer();
+	})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片滑上文字</title>
+    <style>
+        body{
+            font-size: 16px;
+            font-family: "微软雅黑";
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #666;
+        }
+        ul li{
+            list-style: none;
+        }
+        ul{
+            width: 840px;
+            margin: auto;
+            overflow: hidden;
+            background: #fafcfa;
+        }
+        li{
+            float: left;
+            margin: 10px;
+            position: relative;
+        }
+        #main{
+            margin: 100px auto;
+            width: 100%;
+        }
+        h2{
+            padding: 50px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            -webkit-transform:scale(0);
+            -ms-transform:scale(0);
+            -webkit-transition: all 0.5s linear;
+        }
+        img{
+            width: 400px;
+            height: 300px;
+            opacity: 0.9;
+        }
+        li :hover img{
+            opacity: 0.4;
+        }
+        li :hover h2{
+            -webkit-transform:scale(1);
+            opacity: 0.9;
+        }
+        .spe{
+            height: 30px;
+            line-height: 30px;
+            -webkit-box-reflect: below -12px -webkit-linear-gradient(left,rgba(255,255,255,0.4),green);
+            -moz-box-reflect: below -12px -moz-linear-gradient(left,rgba(255,255,255,0.4),green);
+            box-reflect: below -12px linear-gradient(left,rgba(255,255,255,0.4),green);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/pc1.jpg">
+                    <h2>
+                        今天看到这样的一种效果，然后我就来试试。
+                        用html5+css3来玩一玩
+                    </h2>
+                </a>
+            </li>
+            <li><a href="#"><img src="images/pc2.jpg">
+                <h2>暂时的效果是这样的，待以后要用再去改善。</h2>
+            </a></li>
+            <li class="spe">文字倒影效果</li>
+        </ul>
+    </div>
+</body>
+</html>

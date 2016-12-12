@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>Elmer-个人博客</title>
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/all.css" rel="stylesheet" type="text/css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <!--nav-->
+        <div class="nav">
+            <ul>
+                <li><a href="#" class="nav_bar">Elmer</a></li>
+                <li><a href="#" class="nav_bar">首页</a></li>
+                <li><a href="sharePage.html" class="nav_bar" target="_self">分享</a></li>
+                <li><a href="life.html" class="nav_bar" target="_self">生活</a></li>
+                <li><a href="study.html" class="nav_bar">学习</a></li>
+                <li><a href="author.html" class="nav_bar">author</a></li>
+                <form class="nav_form">
+                    <input type="text" class="search" placeholder="Search"/>
+                    <button type="submit" class="nav_btn">搜索search</button>
+                </form>
+            </ul>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="banner">
+            <div id="banner_bg">
+            </div>
+            <!--标题背景-->
+            <div id="banner_info">
+            </div>
+            <!--标题-->
+            <ul>
+                <li class="on">
+                    1
+                </li>
+                <li>
+                    2
+                </li>
+                <li>
+                    3
+                </li>
+                <li>
+                    4
+                </li>
+            </ul>
+            <div id="banner_list">
+                <a href="#" target="_blank"><img src="img/bg2.jpg" title="勇往直前，keep moving" alt="勇往直前，keep moving"></a>
+                <a href="#" target="_blank"><img src="img/bg6.jpg" title="亲近自然" alt="亲近自然"></a>
+                <a href="#" target="_blank"><img src="img/bg4.jpg" title="专属浪漫" alt="埃菲尔铁塔"></a>
+                <a href="#" target="_blank"><img src="img/bg.jpg" title="夕阳西下" alt="枯藤老树昏鸦"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var t = 0, n = 0, count;
+    $(document).ready(function () {
+        count = $("#banner_list a").length;
+        $("#banner_list a:not(:first-child)").hide();
+        $("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
+        $("#banner_info").click(function () {
+            window.open($("#banner_list a:first-child").attr('href'), "_blank")
+        });
+        $("#banner li").click(function () {
+            var i = $(this).text() - 1; //获取Li元素内的值，即1，2，3，4
+            n = i;
+            if (i >= count) return;
+            $("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
+            $("#banner_info").unbind().click(function () {
+                //unbind()方法用来删除指定元素的所有事件处理程序
+                window.open($("#banner_list a").eq(i).attr('href'), "_blank")
+            })
+            $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+                //filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。
+            document.getElementById("banner").style.background = "";
+            $(this).toggleClass("on");
+            $(this).siblings().removeAttr("class");
+        });
+        t = setInterval("showAuto()", 3000);
+        $("#banner").hover(function () {
+                    clearInterval(t)
+                },
+                function () {
+                    t = setInterval("showAuto()", 4000);
+                });
+    })
+
+    function showAuto() {
+        n = n >= (count - 1) ? 0 : ++n;
+        $("#banner li").eq(n).trigger('click');
+    }
+</script>
+<div class="row">
+    <div class="col-md-8">
+        <div class="mainlist">
+            <!-- 文字 -->
+            <div class="articletext">
+                <div class="texticon"></div>
+                <div class="articletitle"><a href="http://niszhu.lofter.com/post/1d421e59_771319a">提前回家</a></div>
+                <div class="txtcnt">
+                    <p>流汗而已。。多做点事，减少家里老人家的负担。这样挺好的。</p>
+                </div>
+            </div>
+
+            <!-- 日志信息 -->
+            <div class="meta">
+                <div class="metasep"></div>
+                <ol>
+                    <li>
+                        <a href="http://niszhu.lofter.com/post/1d421e59_771319a"/>
+                        <img src="img/timer.jpg"/>
+                        2015-06-29
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="metabd"></div>
+            <!-- 文字 -->
+            <div class="articletext">
+                <div class="texticon"></div>
+                <div class="articletitle"><a href="http://niszhu.lofter.com/post/1d421e59_771319a">勿忘初心</a></div>
+                <div class="txtcnt">
+                    <p>
+                        花无百日红，人无百日衰”，赠人玫瑰手有余香。凡事，不求十分，但求尽心，不求圆满，但求尽力。莫让时间蹉跎！让爱在生命里明媚，在信念里长存。明天正不紧不慢地走来，我们，要在痛苦中坚强，在失败中奋起，在磨砺中蜕变，在绝境中重生，展开潇洒的衣袖，携着一缕经年的暗香微笑迎接明天！今日，勿再虚度！为了明天，我们须风雨兼程，且行且珍惜！</p>
+                </div>
+            </div>
+
+            <!-- 日志信息 -->
+            <div class="meta">
+                <div class="metasep"></div>
+                <ol>
+                    <li>
+                        <a href="http://niszhu.lofter.com/post/1d421e59_771319a"/>
+                        <img src="img/timer.jpg"/>
+                        2015-06-29
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="metabd"></div>
+            <!-- 文字 -->
+            <div class="articletext">
+                <div class="texticon"></div>
+                <div class="articletitle"><a href="http://niszhu.lofter.com/post/1d421e59_771319a">Keep Moving</a></div>
+                <div class="txtcnt">
+                    <p>只有在挥洒汗水的时候，你才不会去瞎想，也只有这个时候你不会感到堕落。。
+
+                        未来，我来。</p>
+                </div>
+            </div>
+
+            <!-- 日志信息 -->
+            <div class="meta">
+                <div class="metasep"></div>
+                <ol>
+                    <li>
+                        <a href="http://niszhu.lofter.com/post/1d421e59_771319a"/>
+                        <img src="img/timer.jpg"/>
+                        2015-06-29
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="metabd"></div>
+            <!-- 文字 -->
+            <div class="articletext">
+                <div class="texticon"></div>
+                <div class="articletitle"><a href="http://niszhu.lofter.com/post/1d421e59_771319a">Keep Moving</a></div>
+                <div class="txtcnt">
+                    <p>只有在挥洒汗水的时候，你才不会去瞎想，也只有这个时候你不会感到堕落。。
+
+                        未来，我来。</p>
+                </div>
+            </div>
+
+            <!-- 日志信息 -->
+            <div class="meta">
+                <div class="metasep"></div>
+                <ol>
+                    <li>
+                        <a href="http://niszhu.lofter.com/post/1d421e59_771319a"/>
+                        <img src="img/timer.jpg"/>
+                        2015-06-29
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="metabd"></div>
+            <!-- 文字 -->
+            <div class="articletext">
+                <div class="texticon"></div>
+                <div class="articletitle"><a href="http://niszhu.lofter.com/post/1d421e59_771319a">Keep Moving</a></div>
+                <div class="txtcnt">
+                    <p>只有在挥洒汗水的时候，你才不会去瞎想，也只有这个时候你不会感到堕落。。
+
+                        未来，我来。</p>
+                </div>
+            </div>
+
+            <!-- 日志信息 -->
+            <div class="meta">
+                <div class="metasep"></div>
+                <ol>
+                    <li>
+                        <a href="http://niszhu.lofter.com/post/1d421e59_771319a"/>
+                        <img src="img/timer.jpg"/>
+                        2015-06-29
+                        </a>
+                    </li>
+                </ol>
+            </div>
+            <div class="metabd"></div>
+
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <!--介绍-->
+        <div class="mainintro">
+            <div class="author">
+                <h3>关于我</h3>
+                <img src="img/photo.jpg">
+
+                <div class="link">
+                    <ul>
+                        <li><a href="#" class="xl">新浪微博</a></li>
+                        <li><a href="#" class="rss">RSS</a></li>
+                        <li><a href="#" class="mail">邮箱</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="biaoqian">
+                <h3>标签</h3>
+                <ul>
+                    <li><a href="#">web前端</a></li>
+                    <li><a href="#">Html</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Css</a></li>
+                    <li><a href="#">Jsp</a></li>
+                    <li><a href="#">前端开发</a></li>
+                    <li><a href="#">web开发</a></li>
+                    <li><a href="#">html5</a></li>
+                    <li><a href="#">Css3</a></li>
+                    <li><a href="#">web重构</a></li>
+                </ul>
+                <div style="clear:both;"></div>
+
+            </div>
+            <div class="git">
+                <h3>GitHub</h3>
+                <a href="https://github.com/Tanelmer">https://github.com/Tanelmer</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <!--底部-->
+        <div class="foot">
+            <p class="back">BackTop</p>
+
+            <p>powerBy &copy;elmer</p>
+        </div>
+    </div>
+</div>
+<script>
+    $(".foot .back").click(function () {
+        $("body,html").animate({scrollTop: 0}, 1000)
+        return false;
+    })
+</script>
+</div>
+
+</body>
+</html>
