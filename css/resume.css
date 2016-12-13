@@ -67,10 +67,8 @@ h1{
     cursor: pointer;
 }
 .demo{
-    width: 60%;
+    width: 80%;
     margin: -10px auto;
-    display: -webkit-flex;
-    display: flex;
 }
 .demo div{
 	width: 172px;
@@ -79,6 +77,7 @@ h1{
     margin-top: 1.5em;
     border-radius: 8px 8px 8px 8px;
     overflow: hidden;
+    display: inline-block;
 }
 .demo img{
     border: none;
