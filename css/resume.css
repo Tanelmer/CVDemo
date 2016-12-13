@@ -40,16 +40,18 @@ h1{
 /*第二屏*/
 .shadow{
     display: none;
+    padding: 10px;
     text-align: center;
     background: #029672;
-    width: 50%;
-    height: 50%;
+    width: 240px;
+    height: 100px;
+    box-shadow: 0px 1px 15px #f8f8f8;
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120px,-50px);
 }
 .shadow p{
-    margin-top: 20%;
     font-size: 1.2em;
     color: #e8e8e8;
     font-weight: bold;
@@ -57,10 +59,7 @@ h1{
     white-space: nowrap;
 }
 #close{
-    width: 25%;
-    height: 44px;
-    line-height: 44px;
-    margin-top: 5%;
+	width: 25%;
     margin-right: auto;
     margin-left: auto;
     background: #e8e8e8;
@@ -74,6 +73,7 @@ h1{
     display: flex;
 }
 .demo div{
+	width: 172px;
     border: 1px solid #e8e8e8;
     margin-right: 2em;
     margin-top: 1.5em;
@@ -185,4 +185,16 @@ h1{
 }
 .link a:hover{
     color: #CADC57;
+}
+//workexp
+.workexp p{
+    color: #eee;
+    font-size: 1.2em;
+    margin: 30px auto;
+}
+.workexp a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 30px auto;
 }
