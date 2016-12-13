@@ -18,7 +18,7 @@
 <div id="fullpage">
     <div class="section">
         <div class="intro">
-            <img src="img/pho.png">
+            <img src="img/pho.jpg">
 
             <h1>李欣羿</h1>
 
@@ -172,7 +172,23 @@
             anchors: ['1', '2', '3', '4', '5', '6','7'],
             'navigation': true,
             'navigationPosition': 'right',
-            'navigationTooltips': ['首页', '工作','项目', '技能', '教育', '求职', '联系']
+            'navigationTooltips': ['首页', '工作','项目', '技能', '教育', '求职', '联系'],
+            afterLoad: function(anchorLink, index){
+				if(index == 2){
+				}
+				if(index == 3){
+				}
+				if(index == 4){
+				}
+			},
+			onLeave: function(index, direction){
+				if(index == '2'){
+				}
+				if(index == '3'){
+				}
+				if(index == '4'){
+				}
+			}
         })
         $(".project>.demo").find("img").click(function(){
             $(".project>.shadow").fadeIn("slow");
