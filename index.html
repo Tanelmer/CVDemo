@@ -3,204 +3,156 @@
 <head lang="en">
     <!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=0.8, minimum-scale=0.8, maximum-scale=0.8, user-scalable=no"/>
     <!--当前页面的三要素-->
-    <title>Resume</title>
-    <meta name="Keywords" content="关键词,关键词">
-    <meta name="description" content="">
+    <title>乌漆默嘿-elmer</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta name="Keywords" content="elmer 一个走在前端路上的菜鸟">
+    <meta name="description" content="努力只能及格，拼命才能优秀">
     <meta name="author" content="elmer">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="icon.ico" rel="shortcut icon">
-    <link rel="stylesheet" href="css/resume.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery.fullPage.css" type="text/css">
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/jquery.fullPage.js"></script>
+    <style>
+        @media screen and (max-width: 1920px) {
+            .p-right{
+                width: 80%;
+                left: 20%;
+            }
+            .p-left{
+                width: 20%;
+            }
+        }
+        @media screen and (max-height: 560px){
+            .pic{
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                bottom: 10%;
+                margin-left: -100px;
+                right: -20%;
+            }
+        }
+        @media screen and (max-width: 1024px){
+            .p-right{
+                width: 70%;
+                left: 30%;
+            }
+            .p-left{
+                width: 30%;
+            }
+
+        }
+        @media screen and (max-width: 800px){
+            h2{
+                font-size: 2em;
+            }
+            .p-right{
+                width: 60%;
+                left: 40%;
+            }
+            .p-left{
+                width: 40%;
+            }
+        }
+        /*iphone 6 plus*/
+        @media screen and (max-width: 414px){
+            .p-right{
+                width: 60%;
+                left: 40%;
+            }
+            .p-left{
+                width: 40%;
+            }
+            h2,h3{
+                font-size: 1em;
+            }
+            .pic{
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            position: absolute;
+            right:-35%;
+            margin-left:-100px;
+            bottom: 5%;
+            transition:all 1s ease
+            }
+            .mus{
+                width: 50%;
+                text-align: center;
+                border-radius: 100%;
+                margin-left: 30%;
+            }
+            .mus div{
+                width: 50%;
+            }
+        }
+        /*iphone 4*/
+        @media screen and (max-width: 340px){
+            .pic{
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                position: absolute;
+                right:-38%;
+                margin-left:-50px;
+                bottom: 5%;
+                transition:all 1s ease
+            }
+            .detail{
+                margin-top: 25px;
+            }
+            .detail .link a{
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="fullpage">
-    <div class="section">
-        <div class="intro">
-            <img src="img/pho.jpg">
+    <!--主容器-->
+    <div id="content">
+        <!--中央容器-->
+        <div class="container">
+            <!--页面右边-->
+            <div class="panel p-right">
+                <div class="title">
+                    <h2>Elmer</h2>
+                    <p>Web Front-end Engineer</p>
+                    <h3>Hobbies: programming, photography, sports, games</h3>
+                </div>
+                <div class="detail">
+                     <div class="link"><a href="http://heizi.alltuu.com" target="_blank">photograph</a></div>
+                    <div class="link"><a href="resume.html" target="_blank">Resume</a></div>
+                    <div class="link"><a href="https://github.com/Tanelmer/" target="_blank">GitHub</a></div>
+                    <div class="link"><a href="https://tanelmer.github.io/CVDemo/#1" target="_blank">About</a></div>
+                </div>
+                <div class="mus">
+                    <div>Stick</div>
+                    <div>to</div>
+                    <div>the</div>
+                    <div>end</div>
+                    <div>--</div>
+                    <div>Power</div>
+                    <div>elmer</div>
+                </div>
+            </div>
+            <!--页面左边-->
+            <div class="panel p-left">
+                <div class="title">
+                    <h2>李欣羿</h2>
+                    <p>Web前端攻城狮</p>
+                    <h3>爱好：编程，摄影，运动，游戏</h3>
+                </div>
+                <div class="detail">
+                    <div class="link"><a href="http://heizi.alltuu.com" target="_blank">摄影</a></div>
+                    <div class="link"><a href="resume.html" target="_blank">简历</a></div>
+                    <div class="link"><a href="https://github.com/Tanelmer/" target="_blank">代码</a></div>
+                    <div class="link"><a href="https://tanelmer.github.io/CVDemo/#1" target="_blank">关于</a></div>
+                </div>
+				<img class="pic" src="img/22.jpg">
+            </div>
 
-            <h1>李欣羿</h1>
-
-            <p id="motto">生活的理想，那就是理想的生活!</p>
-
-            <h3 id="profession">Web前端攻城狮</h3>
-
-            <p id="index"><a href="https://github.com/Tanelmer/" target="_blank">github.com/Tanelmer/</a></p>
         </div>
     </div>
-    <div class="section">
-        <div class="edu">
-            <h1>教育背景</h1>
 
-            <p>湖南工程学院 本科</p>
-
-            <p>计算机与通信学院 网络工程专业</p>
-
-            <h2>
-                <em>2016年6月</em>毕业
-            </h2>
-
-            <h3>
-                <a href="mailto:244lixinyi@163.com" target="_blank">大神们，膜拜=。=</a>
-            </h3>
-        </div>
-    </div>
-    <div class="section">
-        <div class="workexp">
-            <h1>工作经历</h1>
-            <p><a href="http://www.alltuu.com">杭州喔影网络科技有限公司</a></p>
-            <p>职位：前端开发工程师</p>
-            <p>职责：主要负责公司pc，移动端网页开发，微信开发</p>
-            <p>前期pc业务，后期因需求转到移动。</p>
-            <h2>
-                <em>time:2016年1月-12月</em>
-            </h2>
-        </div>
-    </div>
-    <div class="section">
-        <div class="project">
-            <h1>练手项目</h1>
-            <div class="demo">
-                <div>
-                    <img src="img/css3li.png" width="100%"  alt="Css3手风琴">
-                    <p class="p1">Css3手风琴案列</p>
-                    <p class="p2">纯Css3制作网页手风琴效果。</p>
-                </div>
-                <div>
-                    <img src="img/danmu.png" width="100%"  alt="简单弹幕">
-                    <p class="p1">简单弹幕案列</p>
-                    <p class="p2">Jq实现视频网站常用弹幕效果。</p>
-                </div>
-                <div>
-                    <img src="img/game1.png" width="100%"  alt="剪刀石头布">
-                    <p class="p1">最纯真的游戏案例</p>
-                    <p class="p2">划拳-剪刀石头布网页版-elmer</p>
-                </div>
-                <div>
-                    <img src="img/musicplay.png" width="100%"  alt="音乐播放器">
-                    <p class="p1">音乐播放器部分功能实现案列</p>
-                    <p class="p2">Js实现对H5 audio元素的常用属性控制等。</p>
-                </div>
-            </div>
-            <div class="demo">
-                <div>
-                    <img src="img/imgf.png" width="100%"  alt="图片瀑布流">
-                    <p class="p1">图片瀑布流-滚动加载案列</p>
-                    <p class="p2">模仿百度图片瀑布流，以及实现滚动加载。</p>
-                </div>
-                <div>
-                    <img src="img/zhedie.png" width="100%"  alt="百叶窗">
-                    <p class="p1">折叠百叶窗案列</p>
-                    <p class="p2">Jq实现网页百叶窗效果。</p>
-                </div>
-                <div>
-                    <img src="img/tianmao.png" width="100%"  alt="天猫首页demo">
-                    <p class="p1">天猫首页demo</p>
-                    <p class="p2">仿天猫首页布局，以及简单banner等特效实现</p>
-                </div>
-                <div>
-                    <img src="img/blog.png" width="100%"  alt="个人博客demo">
-                    <p class="p1">个人博客demo</p>
-                    <p class="p2">独立开发个人博客页面</p>
-                </div>
-            </div>
-            <div class="shadow">
-                <p>不知君能否移驾GitHub？</p>
-                <p id="close">确定</p>
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="skill">
-            <h1>擅长技能</h1>
-
-            <div class="tag">
-                <div>Html</div>
-                <div>Css</div>
-            </div>
-            <div class="tag">
-                <div>Javascript</div>
-                <div>jQuery</div>
-                <div>Bootstrap</div>
-                <div>web前端</div>
-            </div>
-            <div class="tag">
-                <div>html5</div>
-                <div>Css3</div>
-                <div>web重构</div>
-                <div>Vue</div>
-            </div>
-            <div class="tag">
-                <div>Java</div>
-                <div>web开发</div>
-                <div>Jsp</div>
-            </div>
-            <div class="tag">
-                <div>Git</div>
-                <div>Zepto</div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="pro">
-            <h1>理想职位</h1>
-            <h3>前端工程师</h3>
-            <p>当然，希望公司里有个UI会比较好，并不精通PS（只会切切图）。^_^</p>
-            <h4>工作地点:杭州，广州，深圳, 长沙。</h4>
-            <p>如果你觉得还可以</p>
-            <p><a href="mailto:244lixinyi@163.com" target="_blank">聘用我吧！</a></p>
-        </div>
-    </div>
-    <div class="section">
-        <div class="link">
-            <h1>联系方式</h1>
-            <p><a href="javascript:void(0)">E-mail:244lixinyi@163.com</a></p>
-            <p>Tel:18373265876</p>
-            <p>QQ:598203949</p>
-        </div>
-    </div>
-</div>
-<script>
-    $(function () {
-        $("#fullpage").fullpage({
-            "verticalCentered": true,
-            "resize": false,
-            "sectionsColor": ["#029672", "#029672", "#029672", "#029672", "#029672", "#029672","#029672"],
-            "easing": "easeInQuart",
-            anchors: ['1', '2', '3', '4', '5', '6','7'],
-            'navigation': true,
-            'navigationPosition': 'right',
-            'navigationTooltips': ['首页', '工作','项目', '技能', '教育', '求职', '联系'],
-            afterLoad: function(anchorLink, index){
-				if(index == 2){
-				}
-				if(index == 3){
-				}
-				if(index == 4){
-				}
-			},
-			onLeave: function(index, direction){
-				if(index == '2'){
-				}
-				if(index == '3'){
-				}
-				if(index == '4'){
-				}
-			}
-        })
-        $(".project>.demo").find("img").click(function(){
-            $(".project>.shadow").fadeIn("slow");
-        });
-        $("#close").click(function(){
-            $(".project>.shadow").fadeOut("slow");
-            setTimeout(function(){
-            	window.location.href = 'https://github.com/Tanelmer/CVDemo';
-            },300);
-        })
-    })
-</script>
 </body>
 </html>

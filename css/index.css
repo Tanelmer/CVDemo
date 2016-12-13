@@ -70,9 +70,17 @@ h3{
 .title{
     margin-top: 20px;
 }
+.title h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .title p{
     height: 100%;
     margin: 10px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .detail{
     margin-top:50px;
