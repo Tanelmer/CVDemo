@@ -1,0 +1,199 @@
+@charset "utf-8";
+/*css document*/
+body{
+    font:16px/22px "Hiragino Sans GB","Microsoft Yahei","SimSun";
+}
+#fullpage div{
+    text-align: center;
+}
+/*第一屏*/
+.intro>img{
+    width: 256px;
+    height: 256px;
+    border-radius: 100%;
+    border: 10px solid #eee;
+}
+h1{
+    text-shadow: 1px 2px #029672,2px 4px #aee2d9;
+    text-align: center;
+    color:#e8e8e8;
+    font-size:3.5em;
+}
+#motto{
+    text-shadow: 1px 2px #029672,1px 3px #88c;
+    color:#e4e4e4;
+    font-size:1.6em;
+}
+#profession{
+    color:#e8e8e8;
+    font-size:2.0em;
+}
+#index a{
+    font-size:1.4em;
+    color:#333;
+    text-decoration:none;
+    transition: all 1s ease;
+}
+#index a:hover{
+    color:#e8e8e8;
+}
+/*第二屏*/
+.shadow{
+    display: none;
+    padding: 10px;
+    text-align: center;
+    background: #029672;
+    width: 240px;
+    height: 100px;
+    box-shadow: 0px 1px 15px #f8f8f8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-120px,-50px);
+}
+.shadow p{
+    font-size: 1.2em;
+    color: #e8e8e8;
+    font-weight: bold;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+#close{
+	width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    background: #e8e8e8;
+    color: #029672;
+    cursor: pointer;
+}
+.demo{
+    width: 80%;
+    margin: -10px auto;
+}
+.demo div{
+	width: 172px;
+    border: 1px solid #e8e8e8;
+    margin-right: 2em;
+    margin-top: 1.5em;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    display: inline-block;
+}
+.demo img{
+    border: none;
+}
+.demo .p1{
+    padding-left: 0.5em;
+    font-size: 1em;
+    color: #e8e8e8;
+    font-weight: bold;
+    margin-top: 0.5em;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.demo .p2{
+    height: 44px;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 0.8em;
+    color: #E8E8BC;
+}
+/*第三屏*/
+.tag{
+    margin: 16px auto;
+}
+.tag div{
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 5px;
+    background: #e8e8e8;
+    color: #666;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    transition:all 1s ease;
+    font-size: 1.2em;
+}
+.tag div:hover{
+    transform:rotate(360deg);
+    opacity: 0.8;
+}
+/*第四屏*/
+.edu{
+    color: #e8e8e8;
+}
+.edu p{
+    color: #eee;
+    font-size: 1.2em;
+    margin: 30px auto;
+}
+.edu em{
+    color: #333;
+    font-size: 1.6em;
+    font-style: normal;
+    margin: 30px auto;
+
+}
+.edu a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 30px auto;
+}
+.edu a:hover{
+    color: #CADC57;
+}
+/*第五屏*/
+.pro h3{
+    color: #e8e8e8;
+    font-size: 1.5em;
+}
+.pro p{
+    color: #eee;
+}
+.pro h4{
+    color: #333;
+}
+.pro a{
+    color: #333;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+.pro a:hover{
+    color: #CADC57;
+}
+/*第六屏*/
+.link h2{
+    margin: 20px auto;
+}
+.link h2 a{
+    color: #CADCE9;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.link p{
+    color: #e4e4e4;
+    font-size: 1.2em;
+    margin: 20px auto;
+}
+.link p a{
+    text-decoration: none;
+    color: #e8e8e8;
+}
+.link a:hover{
+    color: #CADC57;
+}
+//workexp
+.workexp p{
+    color: #eee;
+    font-size: 1.2em;
+    margin: 30px auto;
+}
+.workexp a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 30px auto;
+}
