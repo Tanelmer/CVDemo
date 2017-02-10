@@ -59,12 +59,20 @@ h1{
     white-space: nowrap;
 }
 #close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+#sure-btn{
 	width: 25%;
     margin-right: auto;
     margin-left: auto;
     background: #e8e8e8;
     color: #029672;
     cursor: pointer;
+    font-size: 14px;
 }
 .demo{
     width: 80%;
@@ -185,15 +193,19 @@ h1{
 .link a:hover{
     color: #CADC57;
 }
-//workexp
 .workexp p{
-    color: #eee;
+    color: #e8e8e8;
     font-size: 1.2em;
-    margin: 30px auto;
+}
+.workexp span{
+	color: #333;
 }
 .workexp a{
     display: block;
-    color: #333;
+    color: #e8e8e8;
     text-decoration: none;
     margin: 30px auto;
+}
+.workexp a:hover{
+    color: #CADC57;
 }
