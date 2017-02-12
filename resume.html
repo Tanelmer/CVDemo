@@ -143,6 +143,9 @@
 </div>
 <script>
     $(function () {
+		if(navigator.userAgent.match(/AppleWebKit.*Mobile.*/)){
+			$(".shadow").css("top","20%");
+		}
         $("#fullpage").fullpage({
             "verticalCentered": true,
             "resize": false,
