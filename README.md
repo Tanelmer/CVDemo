@@ -1,9 +1,9 @@
-# CVDemo - 李欣羿
+# CVDemo - tanelmer
 *梦想不会远，只要你敢追..*
 ```javascript
 	var Person = {
-		name:"李欣羿",
-		age:23,
+		name:"lxy",
+		age:24,
 		sex:"1",
 		addr:"浙江杭州",
 		edu:"本科",
