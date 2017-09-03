@@ -14,4 +14,4 @@
 ```
 ***
 *Blog:*
-[elmerlxy.com](elmerlxy.com)
+[elmerlxy.com](www.elmerlxy.com)
