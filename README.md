@@ -9,8 +9,9 @@
 		edu:"本科",
 		tel:18373265876,
 		email:"244lixinyi@163.com",
-		profession:"Front-end Engineer",
-    	github:"tanelmer.github.com",
-    	blog:"tanelmer.github.io"
-	};
+		profession:"Front-end Engineer"
+	}
 ```
+***
+*Blog:*
+[elmerlxy.com](elmerlxy.com)
